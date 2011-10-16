@@ -1,7 +1,7 @@
 # fancy.vim
 *Syntax highlighting, and eventually plugin, for the [Fancy][F] programming
 language.*
-
+G
 ## What Works
 
 - Keywords
@@ -41,5 +41,8 @@ language.*
 - Interpolated Strings
 - And all the stuff I haven't seen or thought of yet.
 
+## Installation
+This plugin is meant to be installed with [pathogen][P]
 
 [F]: http://fancy-lang.org
+[P]: https://github.com/tpope/vim-pathogen
