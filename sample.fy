@@ -8,7 +8,15 @@ class Foo {
   }
 
   def answer_for: question {
-    42.0
+    @answer42 = 42.0
+  }
+
+  def going_negative{
+    -9
+  }
+
+  def minus_pi {
+    -3.1415
   }
 
   def self confused? {
