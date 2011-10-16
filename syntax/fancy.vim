@@ -11,7 +11,7 @@ endif
 syn keyword fancyKeyword class def try catch finally retry return return_local
 syn keyword fancyKeyword match case
 " use match for `require:` since Vim doesn't like the colon in a keyword.
-syn match fancyKeyword '(require:|->|=>)'
+syn match fancyKeyword '\(require:\|->\|=>\)'
 
 " Special variables
 syn keyword fancySpecialVar nil self super
