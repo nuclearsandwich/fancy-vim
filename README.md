@@ -15,30 +15,31 @@ language.*
 	- `return_local`
 	- `require:`
 	- `match`
-	- `match`
+	- `->`
+	- `=>`
 	- `case`
 - Constants
 - Special Variables
 	`- `true`, `false`, `nil`, `self`, `super`
 - Blocks
 	- `{ .. }` are recognized but nothing is done with them as yet
+- Literal Strings (without interpolation)
+- Literal Numbers
+- Literal Symbols
+- Here Documents
 
 
 ## What Needs Work
-- Keywords
-	- `->`
-	- `=>`
-- Literal Numbers
-- Literal Strings
-- Literal Symbols
-- Here Documents
+- Comments
 - Instance Variables
 - Class Variables
 - Indenting Block Openings
 - De-indenting Block Closes
-- Message Selectors
-ost	    Message Sends
+- Block arguments
+- Method Selectors
+- Method Sends
 - Interpolated Strings
+- And all the stuff I haven't seen or thought of yet.
 
 
 [F]: http://fancy-lang.org
