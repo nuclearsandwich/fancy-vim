@@ -11,6 +11,10 @@ class TestLiteralSyntaxHighlighting {
     "test string with embedded escaped \"  double quote"
   }
 
+  def test_string_with_interpolation {
+    "Sixty-four modulo three: #{64 % 3}"
+  }
+
   def test_heredoc_highlighting {
     """
     This is a heredocument
@@ -39,6 +43,13 @@ class TestLiteralSyntaxHighlighting {
 
   def test_negative_float_highlighting {
     -0.000001
+  }
+
+  def test_no_-_operator_highlighting {
+    four = 4
+    four-2
+    2-3
+    3-four
   }
 }
 
