@@ -29,6 +29,7 @@ syn match fancyConstant '\u\w*'
 
 " Syntax Blocks
 syn region fancyBlock start="{" end="}" fold transparent
+syn region fancyComment start='#' end='$'
 
 let b:current_syntax = "fancy"
 
@@ -42,4 +43,5 @@ highlight def link fancyFloat Float
 highlight def link fancySymbol Label
 highlight def link fancyNonInterpString String
 highlight def link fancyHereDoc String
+highlight def link fancyComment Comment
 
