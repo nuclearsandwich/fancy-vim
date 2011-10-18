@@ -58,14 +58,6 @@ class TestLiteralSyntaxHighlighting {
     -0.000001
   }
 
-  def test_no_-_operator_highlighting {
-    four = 4
-    four-2 # is actually interpreted as the identifier four-2
-    2-3 # is actually interpreted as 5; -3!!!
-    3-four is actually inter
-  }
-}
-
 class TestKeywordSyntaxHighlighting {
   def test_error_keywords_highlighting {
     try {
