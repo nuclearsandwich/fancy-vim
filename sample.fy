@@ -89,8 +89,8 @@ class TestKeywordSyntaxHighlighting {
   }
 
   def test_regexp_highlighting {
-    /https?:(?:www)?\/\/google\.(com|co\.uk|hk|de)/
-    /foobar(baz|qux)[-0-9]{1,2}\\\//i
+    /https?:(?:www)?\/\/\.google\.(com|co\.uk|hk|de)/
+    /foobar(baz|qux)[-0-9]{1,2}\\\//ixmo
     /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/
   }
 }
@@ -137,8 +137,9 @@ class TestVariableSyntaxHighlighting
   }
 
   def test_class_slot_highlighting {
+    "Each slot should be highlighted."
+
     @@classapple
-  }
     @@class_apple
     @@class%apple
     @@class^apple
@@ -156,6 +157,8 @@ class TestVariableSyntaxHighlighting
   }
 
   def test_slot_highlighting {
+    "Each slot should be highlighted."
+
     @apple
     @ap_ple
     @ap%ple
@@ -174,13 +177,25 @@ class TestVariableSyntaxHighlighting
   }
 
   def test_block_variable_highlighting {
-    true if_true: |x, y| { x + y }
+    "|x,y| should be highlighted."
+
+    true if_true: |x y| { x + y }
   }
 
   def test_dynamic_variable_highlighting {
+    "The three dynamic variables should be highlighted."
+
     *stdout*
     *stdin*
     *stderr*
+  }
+
+  def test_message_send_highlighting {
+    "let:, be: and println should be highlighted one way and output another."
+
+    let: output be: *stdout* do: {
+      "I am a sorry tomato" println
+    }
   }
 }
 
