@@ -1,7 +1,13 @@
 # fancy.vim
 *Syntax highlighting, and eventually plugin, for the [Fancy][F] programming
 language.*
-G
+
+### Version: 0.3 Updated 17 October 2011
+
+## Installation
+This plugin is meant to be installed with [pathogen][P].
+Simply clone it into your bundle directory and you're good to go!
+
 ## What Works
 
 - Keywords
@@ -35,24 +41,27 @@ G
 - Comments
 - Slots (instance and class variables)
 - Dynamically scoped variables (`*stdin*, *stdout*, *stderr*)
-
-## Nasty Gotchas
-Valid characters for symbols := `% ^ & * - + = : | < > [ ] ? ! ~`
-Valid characters for identifiers := `% ^ & * - + = < > ? ! ~`
+- Block arguments
+- Regular Expressions (as strings)
 
 ## What Needs Work
-- Indenting Block Openings
-- De-indenting Block Closes
-- Block arguments
-- Method Selectors
-- Method Sends
-- Interpolated Strings
-- Async
-- Futures
+- Syntax Highlighting
+	- Method Selectors
+	- Method Sends
+	- Interpolated Strings
+	- Regexp Internals
+	- Regexp flags
+	- Regexp interpolation
+	- Async
+	- Futures
+- Indentation
+	- Indenting Block Openings
+	- De-indenting Block Closes
 - And all the stuff I haven't seen or thought of yet.
 
-## Installation
-This plugin is meant to be installed with [pathogen][P]
+## Interesting notes about Fancy identifiers and symbols.
+Valid characters for symbols := `% ^ & * - + = : | < > [ ] ? ! ~`
+Valid characters for identifiers := `% ^ & * - + = < > ? ! ~`
 
 [F]: http://fancy-lang.org
 [P]: https://github.com/tpope/vim-pathogen
