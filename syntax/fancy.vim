@@ -26,6 +26,7 @@ syn match fancyFloat /\i\@<![-+]\?\d\+\.\d\+/
 syn match fancySymbol /'\(\w\|[-%^&\*+=:|><\[\]?!~]\)\+/
 syn region fancyNonInterpString start='"' skip='\\"' end='"'
 syn region fancyHereDoc start='"""' end='"""'
+syn region fancyRegexp start='/' skip='\\/' end='/'
 
 " Constants and Identifiers
 syn match fancyConstant /\u\w*/
@@ -34,6 +35,7 @@ syn match fancySlot /@\{1,2\}\(\w\|[-%^&\*+=><?!~]\)\+/
 " Syntax Blocks
 syn region fancyBlock start="{" end="}" fold transparent
 syn region fancyComment start='#' end='$'
+syn region fancyArgBlock start='|' end='|'
 
 let b:current_syntax = "fancy"
 
@@ -51,3 +53,5 @@ highlight def link fancyHereDoc String
 highlight def link fancyComment Comment
 highlight def link fancyConditional Conditional
 highlight def link fancyDynamicVar Macro
+highlight def link fancyRegexp String
+highlight def link fancyArgBlock Special
