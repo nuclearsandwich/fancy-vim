@@ -10,7 +10,6 @@ endif
 " Keywords
 syn keyword fancyKeyword class def try catch finally retry return return_local
 syn keyword fancyKeyword match case
-" syn match fancyDynamicVar '\*\(stdin\|stdout\|stderr\)\*'
 syn match fancyDynamicVar '\*[a-zA-Z0-9_-]\+\*'
 " use match for `require:` since Vim doesn't like the colon in a keyword.
 syn match fancyKeyword /\(require:\|->\|=>\)/
