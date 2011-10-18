@@ -87,6 +87,12 @@ class TestKeywordSyntaxHighlighting {
   def test_hashrocket_keyword_highlighting {
     <[ 'foo => 'bar ]>
   }
+
+  def test_regexp_highlighting {
+    /https?:(?:www)?\/\/google\.(com|co\.uk|hk|de)/
+    /foobar(baz|qux)[-0-9]{1,2}\\\//i
+    /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/
+  }
 }
 
 class TestVariableSyntaxHighlighting
