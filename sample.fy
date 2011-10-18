@@ -183,6 +183,8 @@ class TestVariableSyntaxHighlighting
     *stdout*
     *stdin*
     *stderr*
+    *foo*
+    *bar1_foo_233121*
   }
 }
 
