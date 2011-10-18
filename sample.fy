@@ -22,12 +22,25 @@ class TestLiteralSyntaxHighlighting {
   }
 
   def test_symbol_highlighting {
-    '|foobar:=o--^
     'foobar
-    'foobar?
-    'foobar:
-    'foobar=
-    'foobar-baz
+    'FO_O
+    'FO%O
+    'FO^O
+    'FO&O
+    'FO*O
+    'FO-O
+    'FO+O
+    'FO=O
+    'FO:O
+    'FO|O
+    'FO<O
+    'FO>O
+    'FO[O
+    'FO]O
+    'FO?O
+    'FO!O
+    'FO~O
+    'FOO%^&*-+=:|<>[]?!~
   }
 
   def test_integer_highlighting {
@@ -47,9 +60,9 @@ class TestLiteralSyntaxHighlighting {
 
   def test_no_-_operator_highlighting {
     four = 4
-    four-2
-    2-3
-    3-four
+    four-2 # is actually interpreted as the identifier four-2
+    2-3 # is actually interpreted as 5; -3!!!
+    3-four is actually inter
   }
 }
 
@@ -101,16 +114,75 @@ class TestVariableSyntaxHighlighting
     super
   }
 
-  def test_class_variable_highlighting {
-    @@class_variable
+  def test_conditional_message_highlighting {
+    if: true then: { 'win } else: { 'lose }
+    unless: 'crime then: { 'free } else: { 'jail }
+    true if_true: { "Violence" }
+    false if_false: { "Peace" }
   }
 
-  def test_class_variable_highlighting {
-    @class_information
+  def test_loop_message_highlighting {
+    done = false
+    business = 'unfinished
+
+    until: done do: {
+      "workin'" println
+      done = true
+    }
+
+    while: business == 'unfinished do: {
+      "Finish this" println
+      business = 'finished
+    }
+
+    loop: { "Non!" raise! }
+  }
+
+  def test_class_slot_highlighting {
+    @@classapple
+  }
+    @@class_apple
+    @@class%apple
+    @@class^apple
+    @@class&apple
+    @@class*apple
+    @@class-apple
+    @@class+apple
+    @@class=apple
+    @@class<apple
+    @@class>apple
+    @@class?apple
+    @@class!apple
+    @@class~apple
+    @@class%^&*-+=<>?!~apple
+  }
+
+  def test_slot_highlighting {
+    @apple
+    @ap_ple
+    @ap%ple
+    @ap^ple
+    @ap&ple
+    @ap*ple
+    @ap-ple
+    @ap+ple
+    @ap=ple
+    @ap<ple
+    @ap>ple
+    @ap?ple
+    @ap!ple
+    @ap~ple
+    @ap%^&*-+=<>?!~ple
   }
 
   def test_block_variable_highlighting {
     true if_true: |x, y| { x + y }
+  }
+
+  def test_dynamic_variable_highlighting {
+    *stdout*
+    *stdin*
+    *stderr*
   }
 }
 
