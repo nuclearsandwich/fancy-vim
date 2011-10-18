@@ -188,6 +188,8 @@ class TestVariableSyntaxHighlighting
     *stdout*
     *stdin*
     *stderr*
+    *foo*
+    *bar1_foo_233121*
   }
 
   def test_message_send_highlighting {
